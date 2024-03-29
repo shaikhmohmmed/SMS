@@ -1,0 +1,283 @@
+/* heading */
+
+
+.navbar-brand{
+  font-size: 30px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 500;
+}
+.logo{
+  width:100px ;
+  margin-right: 10px;
+  padding-left: 20px;
+}
+.navbar{
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: transparent;
+}
+.nav-item{
+  display: flex;
+}
+
+
+.nav-item a{
+  margin-left: 30px;
+  font-size:20px;
+  font-weight: 600; 
+  background: transparent;
+}
+
+.navbar-nav{
+  margin-left: 1025px;
+}
+
+.heading{
+  padding: 25% 25% 15%;
+}
+
+
+.download-button{
+  margin-left:20%;
+  border-color: black;
+  width: 20%;
+}
+
+.img{
+  padding-top: 100px;
+  width: 60%;
+  height: 90%;
+}
+
+/* login*/
+
+.popup{
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.log{
+  text-align: center;
+  padding-bottom: 40px;
+  text-transform: uppercase;
+  /* border-bottom: solid gray ; */
+}
+
+
+.popup-content{
+  height: 450px;
+  width: 450px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  position: relative;
+  border: 1px solid black;
+  box-shadow: 6px 6px 29px -4px rgba(0, 0, 0, 0.75);
+}
+
+.input{
+  margin: 20px auto;
+  display: block;
+  width: 70%;
+  padding: 8px;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+
+
+
+.button{
+  background: #fff;
+  padding: 10px 25px;
+  color: #34495e;
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-size: 18px;
+  border-radius: 5px;
+  box-shadow: 6px 6px 29px -4px rgba(0, 0, 0, 0.75);
+  margin-top: 65px;
+  text-decoration: none;
+  transition: 0.4s;
+  display: flex;
+  justify-content: center;
+}
+
+.close{
+  position: absolute;
+  top: 4px;
+  right: 5px;
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+}
+
+.signup{
+  color: black;
+}
+
+/* Signup-popup */
+
+.signup-popup{
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-popup-content{
+  height: 650px;
+  width: 650px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  position: relative;
+  border: 1px solid black;
+  box-shadow: 6px 6px 29px -4px rgba(0, 0, 0, 0.75);
+}
+
+.signup-in{
+  margin: 20px auto;
+  display: block;
+  width: 70%;
+  padding: 8px;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+
+.signup-close{
+  position: absolute;
+  top: 4px;
+  right: 5px;
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+}
+
+/* Admin Login */
+
+.admin-popup{
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.admin-popup-content{
+  height: 450px;
+  width: 450px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  position: relative;
+  border: 1px solid black;
+  box-shadow: 6px 6px 29px -4px rgba(0, 0, 0, 0.75);  
+}
+
+.admin-close{
+  position: absolute;
+  top: 4px;
+  right: 5px;
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+}
+
+.admin-in{
+  margin: 20px auto;
+  display: block;
+  width: 70%;
+  padding: 8px;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+
+
+
+/* Services */
+
+.s1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+  font-size: 70px;
+  font-family:'Times New Roman', Times, serif;
+  font-weight: 50px;
+  font-style: bold;
+} 
+
+.s2{
+  padding-top: 50px;
+  font-size: 30px;
+}
+
+.s3{
+  padding-top: 50px;
+  font-size: 20px;
+}
+
+.img-test{
+ font-size: 50px;
+ max-width: 80%;
+ padding: 60px;
+}
+
+#s4{
+  padding-left: 100px;
+  padding-top: 60px;
+}
+
+.img-test2{
+  padding-left: 10rem;
+  max-width: 100%;
+  max-height: 70%;
+  
+}
+
+
+/* Testimonial */
+
+.t1{
+  text-align: center;
+}
+
+.b1{
+  padding-top: 50px;
+  text-align: center;
+}
+
+/* footer */
+
+.map{
+  max-width: 100%;
+}
+
+
+
+/* Recipt CSS Part */
+
+.logo-re{
+  width: 200px ;
+  margin-right: 20px;
+  padding-left: 700px;
+  align-items:center ; 
+}
