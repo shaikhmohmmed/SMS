@@ -21,15 +21,6 @@
           </li>
         
 
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon far fa-envelope"></i>
-              <p>
-                Mailbox
-                <span class="badge badge-info right">6</span>
-              </p>
-            </a>
-          </li>
 
           <li class="nav-item">
             <a href="maintance.php" class="nav-link">
@@ -55,7 +46,50 @@
               
             </ul>
           </li>
-          
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-book"></i>
+              <p>
+                Mailbox
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Inbox</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Compose</p>
+                </a>
+              </li>
+              
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="bankstatement.php" class="nav-link">
+              <i class="nav-icon fas fa-book"></i>
+              <p>
+                Bank Statement
+                
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-book"></i>
+              <p>
+               Society Vendor
+               
+              </p>
+            </a>
+          </li>
          
           <li class="nav-header">ACCOUNT SETTING</li>
           <li class="nav-item">
