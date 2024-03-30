@@ -1,4 +1,3 @@
-
 <?php
 session_start();
 include('includes/header.php');
@@ -22,7 +21,7 @@ include('config/dbcon.php');
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Bnak Statment</li>
+              <li class="breadcrumb-item active">Data Bank Statment</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -38,7 +37,7 @@ include('config/dbcon.php');
       ?>
       <div class="card">
         <div class="card-header">
-          <h3 class="card-title">Bank Statement
+          <h3 class="card-title">Data Bank Statment
             </h3>
         </div>
        <!-- /.card-header -->
@@ -81,9 +80,6 @@ include('config/dbcon.php');
                               <td><?php echo $row['credit/debit'];  ?></td>
                               <td><?php echo $row['cash'];  ?></td>
                               <td><?php echo $row['imageurl'];  ?></td>
-                              <td>
-                                <a href="recipt.php?user_id=<?php echo $row['id'];  ?>" class=" btn btn-info btn-sm">View</a>                 
-                            </td>
                         </tr>
                         <?php
                         }

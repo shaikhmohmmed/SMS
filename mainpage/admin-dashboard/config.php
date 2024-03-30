@@ -81,7 +81,11 @@ else{
                 }
 }
 }
-//Step 3: Display Data
+// //Step 3: Display Data
 $conn->close();
+
+
+
+
 ?>
 

@@ -73,7 +73,7 @@
           </li>
 
           <li class="nav-item">
-            <a href="bankstatement.php" class="nav-link">
+            <a href="datarecipt.php" class="nav-link">
               <i class="nav-icon fas fa-book"></i>
               <p>
                 Bank Statement
