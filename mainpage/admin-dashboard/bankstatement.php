@@ -48,7 +48,7 @@ include('config/dbcon.php');
             <tr>
               <th>Society ID</th>
               <th>Flat ID</th>
-              <th>Flat M ID</th>
+              <th>Flat Member ID</th>
               <th>Month/Year</th>
               <th>Credit/Debit</th>
               <th>Cash</th>
@@ -62,7 +62,7 @@ include('config/dbcon.php');
                 // Assuming you have already established a database connection
 
                 // Make sure $conn is your mysqli connection variable
-                $query = "SELECT * FROM invoice"; // Replace "your_table" with your actual table name
+                $query = "SELECT * FROM bankstatement"; // Replace "your_table" with your actual table name
 
                 // Perform the query using mysqli_query with the connection object and SQL query
                 $query_run = mysqli_query($conn, $query);
@@ -75,10 +75,12 @@ include('config/dbcon.php');
                         while($row = mysqli_fetch_assoc($query_run)) {
                             ?>
                             <tr>
-                              <td><?php echo $row['id'];  ?></td>
-                              <td><?php echo $row['name'];  ?></td>
-                              <td><?php echo $row['flatnumber'];  ?></td>
-                              <td><?php echo $row['buildnumber'];  ?></td>
+                              <td><?php echo $row['sid'];  ?></td>
+                              <td><?php echo $row['fmid'];  ?></td>
+                              <td><?php echo $row['memberid'];  ?></td>
+                              <td><?php echo $row['credit/debit'];  ?></td>
+                              <td><?php echo $row['cash'];  ?></td>
+                              <td><?php echo $row['imageurl'];  ?></td>
                               <td>
                                 <a href="recipt.php?user_id=<?php echo $row['id'];  ?>" class=" btn btn-info btn-sm">View</a>                 
                             </td>
