@@ -1,91 +1,52 @@
 <?php
-// session_start(); // Start the session
+// Check if form data is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+//     // Validate and sanitize input data
+    $fmid = $_POST['fmid'];
+    $memberid = $_POST['memberid'];
+    $payment = $_POST['payment'];
+    $amount = $_POST['amount'];
+    $imageurl = $_POST['imageurl'];
 
-// $name = $_POST['name'];
-// $date = $_POST['date'];
-// $lastdate = $_POST['lastdate'];
-// $flatnumber = $_POST['flatnumber'];
-// $buildnumber = $_POST['buildnumber'];
-// $fee = $_POST['fee'];
-// $latefee = $_POST['latefee'];
-// $total = $_POST['total'];
+    // Validate input fields (You can add more validation as needed)
+    if (empty($fmid) || empty($memberid) || empty($payment) || empty($amount) || empty($imageurl)) {
+        echo "All fields are required";
+        exit;
+    }
 
-// if (!empty($name) || !empty($date) || !empty($lastdate) || !empty($flatnumber) || !empty($buildnumber) || !empty($fee) || !empty($latefee)) {
-//     $servername = "localhost";
-//     $dbUsername = "root";
-//     $dbPassword = "";
-//     $dbname = "user";
+    // Database connection parameters
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "user";
 
-//     // Create connection
-//     $conn = new mysqli($servername, $dbUsername, $dbPassword, $dbname);
+    // Create connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
 
-//     if (mysqli_connect_error()) {
-//         die('Connection Error (' . mysqli_connect_errno() . ') ' . mysqli_connect_error());
-//     } else {
-//         $INSERT = "INSERT INTO invoice (name, date, lastdate, flatnumber, buildnumber, fee, latefee, total) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
-//         $stmt = $conn->prepare($INSERT);
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
 
-//         if (!$stmt) {
-//             die('Error: ' . $conn->error);
-//         }
+    // Prepare insert query
+    $sql = "INSERT INTO bankstatement (fmid, memberid, payment, amount, imageurl) 
+            VALUES (?, ?, ?, ?, ?)";
 
-//         $stmt->bind_param("sssiiddd", $name, $date, $lastdate, $flatnumber, $buildnumber, $fee, $latefee, $total);
-//         $stmt->execute();
+    // Prepare and bind parameters
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("iisss", $fmid, $memberid, $payment, $amount, $imageurl);
 
-//         if ($stmt->affected_rows > 0) {
-//             $_SESSION['status'] = "Bill made Successfully";
-//         } else {
-//             $_SESSION['status'] = "Bill cannot be made";
-//         }
-
-//         $stmt->close();
-//         $conn->close();
-
-//         header("Location: registered.php"); // Redirect after processing
-//         exit(); // Exit to prevent further execution
-//     }
-// } else {
-//     echo "All fields are required";
-//     die(); // Terminate script execution
-// }
-
-
-// Successfull Connection
-
-
-// Step 1: Connect to the database
-$servername = "localhost"; // Replace with your server name
-$username = "root"; // Replace with your database username
-$password = ""; // Replace with your database password
-$dbname = "user"; // Replace with your database name
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-else{
-    $INSERT = "INSERT INTO invoice (name, date, lastdate, flatnumber, buildnumber, fee, latefee, total) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
-    if (mysqli_connect_error()) {
-        die('Connection Error (' . mysqli_connect_errno() . ') ' . mysqli_connect_error());
+    // Execute the query
+    if ($stmt->execute()) {
+        echo "New record inserted successfully";
     } else {
-        $INSERT = "INSERT INTO invoice (name, date, lastdate, flatnumber, buildnumber, fee, latefee, total) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
-        $stmt = $conn->prepare($INSERT);
-        
-        if (!$stmt) {
-                        echo "data Connect";
-                    die('Error: ' . $conn->error);
-                }
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+
+    // Close statement and connection
+    $stmt->close();
+    $conn->close();
+} else {
+    echo "Form data not submitted";
 }
-}
-// //Step 3: Display Data
-$conn->close();
-
-
-
-
 ?>
-

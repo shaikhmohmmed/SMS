@@ -207,39 +207,5 @@
 </body>
 
 
-<?php
-// session_start();
-// include('config1.php');
-// // require 'config1.php';
-// // var_dump("Hie");
-// //   exit();
-// if (!$conn) {
-//     die("Connection failed: " . mysqli_connect_error());
-// } else {
-//     echo "Connected successfully";
-// }
-
-// if(isset($_POST["submit"])){
-  
-//     $email = mysqli_real_escape_string($conn, $_POST["email"]);
-//     $password = $_POST["password"];
-
-//     $result = mysqli_query($conn, "SELECT * FROM registration WHERE email ='".$_SESSION['email']."'");
-//     if(mysqli_num_rows($result) > 0){
-//         $row = mysqli_fetch_assoc($result);
-//         if(password_verify($password, $row["password"])){
-//             $_SESSION["login"] = true;
-//             $_SESSION["id"] = $row["id"];
-//             header("Location: recipt.php"); // Redirect to the user dashboard
-//             exit();
-//         } else {
-//             echo "Wrong Password";
-//         }
-//     } else {
-//         echo "User not Approved or not Registered";
-//     }
-// }
-?>
-
 </html>
 

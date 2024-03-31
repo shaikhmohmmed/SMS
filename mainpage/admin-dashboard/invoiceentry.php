@@ -18,7 +18,7 @@ include('config.php');
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
                 <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item active">Maintance Bill</li>
+                <li class="breadcrumb-item active">Data Entry</li>
                 </ol>
             </div><!-- /.col -->
             </div><!-- /.row -->
@@ -28,8 +28,10 @@ include('config.php');
                 <!-- /.card -->
         <div class="card">
             <div class="card-header">
-            <h3 class="card-title">Maintance Bill
+            <h3 class="card-title">Data Entry
                 </h3>
+                <br>
+                <br>
                 <a href="index.php" class="btn btn-primary btn-sm float-right btn-danger">Back</a>
                 <div class="card-body">
                     <div class="row">
@@ -37,32 +39,29 @@ include('config.php');
                         <form action="config.php" method="POST">
                             <div class="modal-body">
                                             <div class="form-group" >
-                                                <label for="">Name</label>
-                                                <input type="text" name="name"  class="form-control" placeholder="Name">
+                                                <label for="">Flat Member ID</label>
+                                                <input type="text" name="fmid"  class="form-control" placeholder="Member ID" required>
                                             </div>
                                             
                                             <div class="form-group">
-                                                <label for="">Flat Number</label>
-                                                <input type="text" name="flatnumber"  class="form-control" placeholder="Flat Number">
+                                                <label for="">Member Name</label>
+                                                <input type="text" name="memberid"  class="form-control" placeholder="Member Name" required>
+                                            </div>
+    
+                                            <div class="form-group">
+                                                <label for="">Payment Method</label>
+                                                <input type="text" name="payment"  class="form-control" placeholder="Payment Method" required>
                                             </div>
                                             <div class="form-group">
-                                                <label for="">Due Date</label>
-                                                <input type="text" name="flatnumber"  class="form-control" placeholder="Due date">
+                                                <label for="">Amount</label>
+                                                <input type="text" name="amount"  class="form-control" placeholder="Amount" required>
                                             </div>
                                             <div class="form-group">
-                                                <label for="">Building Number</label>
-                                                <input type="text" name="phonenumber"  class="form-control" placeholder="Building Number">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="">Fees</label>
-                                                <input type="text" name="address"  class="form-control" placeholder="Maintance Fee">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="">Penalty</label>
-                                                <input type="text" name="address"  class="form-control" placeholder="Penalty">
+                                                <label for="">Image URL</label>
+                                                <input type="file" name="imageurl"  class="form-control" placeholder="imageurl" >
                                             </div>
                             <div class="modal-footer">
-                                <button type="submit" name= "maintanceUser "class="btn btn-info">Submit</button>
+                                <button type="submit" name= "#"class="btn btn-info">Submit</button>
                             </div>
                             </form>
                         </div>

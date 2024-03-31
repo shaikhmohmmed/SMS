@@ -49,9 +49,9 @@ include('config/dbcon.php');
               <th>Flat ID</th>
               <th>Flat Member ID</th>
               <th>Month/Year</th>
-              <th>Credit/Debit</th>
-              <th>Cash</th>
-              <th>image URL</th>
+              <th>Credit/Debit/Cash</th>
+              <th>Amount</th>
+              <th>Image URL</th>
 
             </tr>
             </thead>
@@ -77,9 +77,11 @@ include('config/dbcon.php');
                               <td><?php echo $row['sid'];  ?></td>
                               <td><?php echo $row['fmid'];  ?></td>
                               <td><?php echo $row['memberid'];  ?></td>
-                              <td><?php echo $row['credit/debit'];  ?></td>
-                              <td><?php echo $row['cash'];  ?></td>
+                              <td><?php echo $row['month'];  ?></td>
+                              <td><?php echo $row['payment'];  ?></td>
+                              <td><?php echo $row['amount'];  ?></td>
                               <td><?php echo $row['imageurl'];  ?></td>
+                
                         </tr>
                         <?php
                         }
@@ -111,3 +113,7 @@ include('config/dbcon.php');
 <?php
 include('includes/footer.php');
 ?>
+
+
+
+
