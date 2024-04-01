@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Prepare and bind parameters
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("iisss", $fmid, $memberid, $payment, $amount, $imageurl);
+    $stmt->bind_param("sssis", $fmid, $memberid, $payment, $amount, $imageurl);
 
     // Execute the query
     if ($stmt->execute()) {

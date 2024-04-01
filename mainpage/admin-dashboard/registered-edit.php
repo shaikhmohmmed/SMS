@@ -36,9 +36,6 @@ include('config/dbcon.php');
                         <div class="col-md-6">
                         <form action="code.php" method="POST">
                             <div class="modal-body">
-                                
-
-
                                     <?php
                                     if(isset($_GET['user_id'])) {
                                         $user_id = $_GET['user_id'];
