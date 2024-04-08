@@ -32,11 +32,33 @@ include('includes/sidebar.php');
             </h3>
         </div>
        <!-- /.card-header -->
-       <img style= "width: 200px; height: auto"  src="images/sample.jpg" alt="user-image">
-        <div class="card-body">
-          <h4>Name: Mohammad Shaikh</h4>
-          <h4>Details</h4>
+      <img style= "width: 180px; height: 180px; border-radius: 50%; margin-top: 40px; margin-bottom: 30px; margin-left: 10px"  src="images/user.png" alt="user-image" id="profile-pic">
+       <label for="input-file" style= "display: block; width: 150px; background: #e3362c; color: #fff; padding: 12px; margin-left: 10px;  border-radius: 5px; cursor: pointer;">Update Image</label>
+      <input  style= "display: none;" type="file" accept ="image/jpeg, image/png, image/jpg" id = "input-file">
+      <script>
+        let profilePic = document.getElementById("profile-pic");
+        let inputFile = document.getElementById("input-file");
 
+        inputFile.onchange = function (){
+          profilePic.src = URL.createObjectURL(inputFile.files[0]);
+        }
+      </script>
+      <div class = "row"> 
+       <div class="card-body">
+        <div class="col-md-6">
+        <h6>Name: Mohammad Shaikh</h6> 
+        
+          <h6>Flat Number: A103</h6>
+          <h6>Building Number: A</h6>
+          <h6>Phone Number: 9028790609</h6>
+          </div>
+          <div class="col-md-6 ">
+            <h6>Documentation:
+            <input type="img"  >
+
+            </h6>
+          </div>
+          </div>
       </div>
       <div class="card">
         <div class="card-header">
@@ -48,8 +70,8 @@ include('includes/sidebar.php');
           <table id="example1" class="table table-bordered table-striped">
             <thead>
             <tr>
-              <th>Sr No.</th>
               <th>Name</th>
+              <th>Number of Family</th>
               <th>Flat Number</th>
               <th>Building Number</th>
               <th>Bill</th>
@@ -71,11 +93,7 @@ include('includes/sidebar.php');
                   
                     <tr>
                         <td>No Record Found</td>
-                    </tr>
-              
-
-
-            
+                    </tr>          
          </tbody>
            </table> 
       </div>
