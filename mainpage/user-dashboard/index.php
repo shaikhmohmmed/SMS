@@ -25,24 +25,16 @@ include('includes/sidebar.php');
 
     <!-- Main content -->
    
-    
-      <div class="card">
-        <div class="card-header">
-          <h3 class="card-title">User Data
-            </h3>
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title">User Data
+          </h3>
         </div>
-       <!-- /.card-header -->
-      <img style= "width: 180px; height: 180px; border-radius: 50%; margin-top: 40px; margin-bottom: 30px; margin-left: 10px"  src="images/user.png" alt="user-image" id="profile-pic">
-       <label for="input-file" style= "display: block; width: 150px; background: #e3362c; color: #fff; padding: 12px; margin-left: 10px;  border-radius: 5px; cursor: pointer;">Update Image</label>
-      <input  style= "display: none;" type="file" accept ="image/jpeg, image/png, image/jpg" id = "input-file">
-      <script>
-        let profilePic = document.getElementById("profile-pic");
-        let inputFile = document.getElementById("input-file");
-
-        inputFile.onchange = function (){
-          profilePic.src = URL.createObjectURL(inputFile.files[0]);
-        }
-      </script>
+        <!-- /upload image -->
+        <form action = "upload.php" method= "POST" enctype = "multipart/form-data">
+      <!-- <img style= "width: 180px; height: 180px; border-radius: 50%; margin-top: 40px; margin-bottom: 30px; margin-left: 10px"  src="images/user.png" alt="user-image" id="profile-pic"> -->
+      <input  style= "" type="file"  name = "my_image">
+      <input type="submit" name = "submit" value = "Upload">
       <div class = "row"> 
        <div class="card-body">
         <div class="col-md-6">
@@ -60,6 +52,9 @@ include('includes/sidebar.php');
           </div>
           </div>
       </div>
+      </form>
+
+
       <div class="card">
         <div class="card-header">
           <h3 class="card-title">Maintance Fee Data

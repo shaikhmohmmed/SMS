@@ -34,7 +34,7 @@ include('config/dbcon.php');
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-6">
-                        <form action="code.php" method="POST">
+                        <form action="update.php" method="POST">
                             <div class="modal-body">
                                     <?php
                                     if(isset($_GET['user_id'])) {
@@ -82,7 +82,7 @@ include('config/dbcon.php');
                                     ?>
 
                             <div class="modal-footer">
-                                <button type="submit" name= "updateUser "class="btn btn-info">Update</button>
+                                <button type="submit" name= "updateUser" class="btn btn-info">Update</button>
                             </div>
                             </form>
                         </div>
