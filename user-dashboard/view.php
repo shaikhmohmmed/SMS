@@ -14,7 +14,7 @@
             while ($images = mysqli_fetch_assoc($res)) {  ?>
         
             <div class="alb">
-            <img src="images/<?=$images['iimg_url']?>" >
+            <img src="images/<?=$images['img_url']?>" >
         </div>
 
   <?php } }?>        

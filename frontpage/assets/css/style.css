@@ -6,171 +6,56 @@
  * copyright 2022 codewithsadee
  */
 
-
-
-/* login*/
-
-.popup{
-  background: rgba(0, 0, 0, 0.6);
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
+/* popup */
+.popup .overlay{
+  position: fixed;
+  width: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  height: 100vh;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
   display: none;
-  justify-content: center;
-  align-items: center;
+}
+.popup .content{
+position:absolute;
+top: 50%;
+left: 50%;
+transform:translate(-50%,-50%) scale(0);
+background: #fff; 
+width: 450px;
+height: 220px;
+z-index: 2;
+text-align: center;
+padding: 20px;
+box-sizing: border-box;
 }
 
-.log{
+.popup .close-btn{
+  cursor: pointer;
+  position:absolute;
+  right: 20px;
+  top: 20px;
+  width: 30px;
+  height: 30px;
+  background: #222;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 30px;
   text-align: center;
-  padding-bottom: 40px;
-  text-transform: uppercase;
-  color: black;
-  /* border-bottom: solid gray ; */
+  border-radius: 50%;
 }
 
-
-.popup-content{
-  height: 450px;
-  width: 450px;
-  background: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  position: relative;
-  border: 1px solid black;
-  box-shadow: 6px 6px 29px -4px rgba(0, 0, 0, 0.75);
-}
-
-.input{
-  margin: 20px auto;
+.popup .active .overlay{
   display: block;
-  width: 70%;
-  padding: 8px;
-  border: 1px solid gray;
-  border-radius: 10px;
 }
 
-
-
-.button{
-  background: #fff;
-  padding: 10px 25px;
-  color: #34495e;
-  font-weight: bolder;
-  text-transform: uppercase;
-  font-size: 18px;
-  border-radius: 5px;
-  box-shadow: 6px 6px 29px -4px rgba(0, 0, 0, 0.75);
-  margin-top: 65px;
-  text-decoration: none;
-  transition: 0.4s;
-  display: flex;
-  justify-content: center;
+.popup .active .content{
+  transition: all 300ms ease-in-out;
+  transform: translate(-50%, -50%) scale(1);
 }
-
-.close{
-  position: absolute;
-  top: 4px;
-  right: 5px;
-  height: 20px;
-  width: 20px;
-  cursor: pointer;
-  color: black;
-}
-
-.signup{
-  color: black;
-}
-
-/* Signup-popup */
-
-.signup-popup{
-  background: rgba(0, 0, 0, 0.6);
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  display: none;
-  justify-content: center;
-  align-items: center;
-}
-
-.signup-popup-content{
-  height: 650px;
-  width: 650px;
-  background: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  position: relative;
-  border: 1px solid black;
-  color: black;
-  box-shadow: 6px 6px 29px -4px rgba(0, 0, 0, 0.75);
-}
-
-.signup-in{
-  margin: 20px auto;
-  display: block;
-  width: 70%;
-  padding: 8px;
-  border: 1px solid gray;
-  border-radius: 10px;
-  color: black;
-}
-
-.signup-close{
-  position: absolute;
-  top: 4px;
-  right: 5px;
-  height: 20px;
-  width: 20px;
-  color: black;
-  cursor: pointer;
-}
-
-/* Admin Login */
-
-.admin-popup{
-  background: rgba(0, 0, 0, 0.6);
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  display: none;
-  justify-content: center;
-  align-items: center;
-}
-
-.admin-popup-content{
-  height: 450px;
-  width: 450px;
-  background: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  position: relative;
-  border: 1px solid black;
-  box-shadow: 6px 6px 29px -4px rgba(0, 0, 0, 0.75);  
-}
-
-.admin-close{
-  position: absolute;
-  top: 4px;
-  right: 5px;
-  height: 20px;
-  width: 20px;
-  cursor: pointer;
-}
-
-.admin-in{
-  margin: 20px auto;
-  display: block;
-  width: 70%;
-  padding: 8px;
-  border: 1px solid gray;
-  border-radius: 10px;
-}
-
-
-
+ 
 
 /*-----------------------------------*\
   #CUSTOM PROPERTY
@@ -1068,7 +953,7 @@ body.nav-active { overflow: hidden; }
 
 .service .section-title { margin-block-end: 16px; }
 
-.service .section-text { margin-block-end: 40px; }
+.service .section-text { margin-block-end: 50px; }
 
 .service-card { overflow: hidden; }
 
@@ -1182,7 +1067,8 @@ body.nav-active { overflow: hidden; }
   margin-block-end: 12px;
 }
 
-.special-dish .section-text { margin-block: 16px 40px; }
+.special-dish .section-text { margin-block: 16px 50px;
+ }
 
 .special-dish-content .wrapper {
   display: flex;

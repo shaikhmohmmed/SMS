@@ -190,10 +190,13 @@
 
       </nav>
 
-      <a href="#" class="btn btn-secondary">
-        <span class="text text-1">ENQUIRY</span>
+      <a href="login page/login main/Enquiry.php" class="btn btn-secondary">
+       
+      <button type="submit"> 
+      <span class="text text-1">ENQUIRY</span>
 
         <span class="text text-2" aria-hidden="true">ENQUIRY</span>
+        </button>
       </a>
 
       <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
@@ -230,7 +233,7 @@
 
             <p class="label-2 section-subtitle slider-reveal">Community cohesion</p>
 
-            <h1 class="display-1 hero-title slider-reveal">
+            <h1 class=" display-1 hero-title slider-reveal">
               Unity Bonds Community,<br> Strength Ensues.
               
             </h1>
@@ -239,63 +242,11 @@
               Family gatherings offer mouthwatering joy, managed by society.
             </p>
 
-            <a href="#" class="btn btn-primary slider-reveal download-button" id="1-button">
+            <a href="login page/login main/index.html" class="btn btn-primary slider-reveal">
               <span class="text text-1">Login</span>
               <span class="text text-2" aria-hidden="true">Login</span>
             </a>
-            <div class="popup">
-              <div class="popup-content">
-                <p class="close">x</p>
-                <h2 class="log">Login</h2>
-                <input  class="input" type="text" name="email" placeholder="Email ID" required values = "<?php if (isset($_user["registration"])){echo $_user["registration"];}?>" name="email">
-                <input class="input" type="password" name="password" placeholder="Password" required values = "<?php if (isset($_user["registration"])){echo $_user["registration"];}?>" name="password">
-                <br><br>
-                <button style = "margin-left: 170px" type="submit" name= "submit">Login</button>
-                </form>  
-                <br>               
-                <a href="#" class="signup" id="3-button"> Signup</a>
-                <!-- Signup-popup -->
-                <form action="config1.php" method="post">
-                <div class="signup-popup">
-                  <div class="signup-popup-content">
-                    <p class="signup-close">x</p>
-                    <h2 class="signup-log">Register</h2>
-                    <input class="signup-in" type="text" placeholder="Name" name="name" required>
-                    <input class="signup-in" type="text" placeholder="Username" name="username" required>
-                    <input class="signup-in" type="text" placeholder="email" name="email" required>
-                    <input class="signup-in" type="text" placeholder="Flat-Number" name="flatnumber" required>
-                    <input class="signup-in" type="text" placeholder="Mobile Number" name="phonenumber" required>
-                    <input class="signup-in" type="text" placeholder="Address" name="address" required>
-                    <input class="signup-in" type="password" placeholder="password" name="password" required>
-                    <input type="submit" class="button">
-                  </div>
-                </div>
-              </form>
-                <script>
-                  document.getElementById("3-button").addEventListener("click", function(){
-                    document.querySelector(".signup-popup").style.display = "flex";
-                  })
-    
-                  
-                  document.querySelector(".signup-close").addEventListener("click", function(){
-                    document.querySelector(".signup-popup").style.display = "none";
-                  })
-                </script>
 
-              </div>
-            </div> 
-
-            <!-- Script for login page -->
-            <script>
-              document.getElementById("1-button").addEventListener("click", function(){
-                document.querySelector(".popup").style.display = "flex";
-              })
-
-              document.querySelector(".close").addEventListener("click", function(){
-                document.querySelector(".popup").style.display = "none";
-              })
-            </script>
-                
           </li>
 
           <li class="slider-item" data-hero-slider-item>
@@ -315,64 +266,12 @@
               Empowering communities through social responsibility
             </p>
 
-            <a href="#" class="btn btn-primary slider-reveal download-button" id="1-button">
+            <a href="login page/login main/index.html" class="btn btn-primary slider-reveal">
               <span class="text text-1">Login</span>
 
               <span class="text text-2" aria-hidden="true">login</span>
             </a>
-            <div class="popup">
-              <div class="popup-content">
-                <p class="close">x</p>
-                <h2 class="log">Login</h2>
-                <input  class="input" type="text" name="email" placeholder="Email ID" required values = "<?php if (isset($_user["registration"])){echo $_user["registration"];}?>" name="email">
-                <input class="input" type="password" name="password" placeholder="Password" required values = "<?php if (isset($_user["registration"])){echo $_user["registration"];}?>" name="password">
-                <br><br>
-                <button style = "margin-left: 170px" type="submit" name= "submit">Login</button>
-                </form>  
-                <br>               
-                <a href="#" class="signup" id="3-button"> Signup</a>
-                <!-- Signup-popup -->
-                <form action="config1.php" method="post">
-                <div class="signup-popup">
-                  <div class="signup-popup-content">
-                    <p class="signup-close">x</p>
-                    <h2 class="signup-log">Register</h2>
-                    <input class="signup-in" type="text" placeholder="Name" name="name" required>
-                    <input class="signup-in" type="text" placeholder="Username" name="username" required>
-                    <input class="signup-in" type="text" placeholder="email" name="email" required>
-                    <input class="signup-in" type="text" placeholder="Flat-Number" name="flatnumber" required>
-                    <input class="signup-in" type="text" placeholder="Mobile Number" name="phonenumber" required>
-                    <input class="signup-in" type="text" placeholder="Address" name="address" required>
-                    <input class="signup-in" type="password" placeholder="password" name="password" required>
-                    <input type="submit" class="button">
-                  </div>
-                </div>
-              </form>
-                <script>
-                  document.getElementById("3-button").addEventListener("click", function(){
-                    document.querySelector(".signup-popup").style.display = "flex";
-                  })
-    
-                  
-                  document.querySelector(".signup-close").addEventListener("click", function(){
-                    document.querySelector(".signup-popup").style.display = "none";
-                  })
-                </script>
 
-              </div>
-            </div> 
-
-            <!-- Script for login page -->
-            <script>
-              document.getElementById("1-button").addEventListener("click", function(){
-                document.querySelector(".popup").style.display = "flex";
-              })
-
-              document.querySelector(".close").addEventListener("click", function(){
-                document.querySelector(".popup").style.display = "none";
-              })
-            </script>
-           
           </li>
 
           <li class="slider-item" data-hero-slider-item>
@@ -391,64 +290,12 @@
               Enhancing Community Life Through Technology.
             </p>
 
-            <a href="#" class="btn btn-primary slider-reveal download-button" id="1-button">
+            <a href="login page/login main/index.html" class="btn btn-primary slider-reveal">
               <span class="text text-1">Login</span>
 
               <span class="text text-2" aria-hidden="true">Login</span>
             </a>
-            <div class="popup">
-              <div class="popup-content">
-                <p class="close">x</p>
-                <h2 class="log">Login</h2>
-                <input  class="input" type="text" name="email" placeholder="Email ID" required values = "<?php if (isset($_user["registration"])){echo $_user["registration"];}?>" name="email">
-                <input class="input" type="password" name="password" placeholder="Password" required values = "<?php if (isset($_user["registration"])){echo $_user["registration"];}?>" name="password">
-                <br><br>
-                <button style = "margin-left: 170px" type="submit" name= "submit">Login</button>
-                </form>  
-                <br>               
-                <a href="#" class="signup" id="3-button"> Signup</a>
-                <!-- Signup-popup -->
-                <form action="config1.php" method="post">
-                <div class="signup-popup">
-                  <div class="signup-popup-content">
-                    <p class="signup-close">x</p>
-                    <h2 class="signup-log">Register</h2>
-                    <input class="signup-in" type="text" placeholder="Name" name="name" required>
-                    <input class="signup-in" type="text" placeholder="Username" name="username" required>
-                    <input class="signup-in" type="text" placeholder="email" name="email" required>
-                    <input class="signup-in" type="text" placeholder="Flat-Number" name="flatnumber" required>
-                    <input class="signup-in" type="text" placeholder="Mobile Number" name="phonenumber" required>
-                    <input class="signup-in" type="text" placeholder="Address" name="address" required>
-                    <input class="signup-in" type="password" placeholder="password" name="password" required>
-                    <input type="submit" class="button">
-                  </div>
-                </div>
-              </form>
-                <script>
-                  document.getElementById("3-button").addEventListener("click", function(){
-                    document.querySelector(".signup-popup").style.display = "flex";
-                  })
-    
-                  
-                  document.querySelector(".signup-close").addEventListener("click", function(){
-                    document.querySelector(".signup-popup").style.display = "none";
-                  })
-                </script>
 
-              </div>
-            </div> 
-
-            <!-- Script for login page -->
-            <script>
-              document.getElementById("1-button").addEventListener("click", function(){
-                document.querySelector(".popup").style.display = "flex";
-              })
-
-              document.querySelector(".close").addEventListener("click", function(){
-                document.querySelector(".popup").style.display = "none";
-              })
-            </script>
-           
           </li>
 
         </ul>
@@ -464,7 +311,7 @@
         <a href="#" class="hero-btn has-after">
           <img src="./assets/images/city.png" width="48" height="48" alt="booking icon">
 
-          <span class="label-2 text-center span">Book A Flats</span>
+          <span class="label-2 text-center span">SMS</span>
         </a>
 
       </section>
@@ -480,12 +327,12 @@
       <section class="section service bg-black-10 text-center" aria-label="service">
         <div class="container">
 
-          <p class="section-subtitle label-2">Royalty</p>
+          
 
           <h2 class="headline-1 section-title">Try Our Services</h2>
 
           <p class="section-text">
-            Society amenities include parking, playground, and gym facilities, catering to residents'
+            Society amenities include parking, Billing, and Online Payment facilities, catering to residents'
             recreational and fitness needs, enhancing community well-being.
           </p>
 
@@ -505,6 +352,42 @@
 
                   <h3 class="title-4 card-title">
                     <a href="#">Parking</a>
+
+                  <!-- <a href="#" class="btn-text hover-underline label-2">View More</a> -->
+                  <button type="submit"class="btn-text hover-underline label-2" onclick="openPopup()">View More</button>
+                  <div class="popup" id="popup-1">
+                    <div class="overlay"></div>
+                    <div class="content">
+                      <div class="close-btn" onclick="togglePopup()">&times;</div>
+                      <h1>Title</h1>
+                    <p>Society parking management involves various aspects aimed at optimizing parking space within residential complexes. It typically includes the allocation of designated parking spots to residents, visitors, and service providers, often based on factors like ownership, tenancy agreements, or availability.
+                    Modern society parking systems may integrate technology such as parking management software, automated ticketing systems, and CCTV surveillance for enhanced security and efficiency. These systems can provide real-time monitoring of parking availability, facilitate online booking of visitor parking slots, and generate automated alerts for unauthorized parking.
+                    </p>
+                  </div>
+                </div>
+                <button onclick="togglePopup()">show Popup</button>
+              <script>
+              function togglePopup() {
+                document.getElementById("popup-1").classList.toggle("active")
+              }
+              </script>
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+
+                <a href="#" class="has-before hover:shine">
+                  <figure class="card-banner img-holder" style="--width: 285; --height: 336;">
+                    <img src="./assets/images/bill.jpg" width="285" height="336" loading="lazy" alt="Appetizers"
+                      class="img-cover">
+                  </figure>
+                </a>
+
+                <div class="card-content">
+
+                  <h3 class="title-4 card-title">
+                    <a href="#">Billing</a>
                   </h3>
 
                   <a href="#" class="btn-text hover-underline label-2">View More</a>
@@ -519,7 +402,7 @@
 
                 <a href="#" class="has-before hover:shine">
                   <figure class="card-banner img-holder" style="--width: 285; --height: 336;">
-                    <img src="./assets/images/play.jpg" width="285" height="336" loading="lazy" alt="Appetizers"
+                    <img src="./assets/images/payment.jpg" width="285" height="336" loading="lazy" alt="Drinks"
                       class="img-cover">
                   </figure>
                 </a>
@@ -527,30 +410,7 @@
                 <div class="card-content">
 
                   <h3 class="title-4 card-title">
-                    <a href="#">Playground/Garden</a>
-                  </h3>
-
-                  <a href="#" class="btn-text hover-underline label-2">View More</a>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="service-card">
-
-                <a href="#" class="has-before hover:shine">
-                  <figure class="card-banner img-holder" style="--width: 285; --height: 336;">
-                    <img src="./assets/images/Gym.jpg" width="285" height="336" loading="lazy" alt="Drinks"
-                      class="img-cover">
-                  </figure>
-                </a>
-
-                <div class="card-content">
-
-                  <h3 class="title-4 card-title">
-                    <a href="#">Gymnasium</a>
+                    <a href="#">Online Payment</a>
                   </h3>
 
                   <a href="#" class="btn-text hover-underline label-2">View More</a>
@@ -595,7 +455,7 @@
 
             <div class="contact-label">Book Through Call</div>
 
-            <a href="tel:+804001234567" class="body-1 contact-number hover-underline">+80 (400) 123 4567</a>
+            <a href="tel:+91 8380806582" class="body-1 contact-number hover-underline">+91 8380806582</a>
 
             <!-- <a href="#" class="btn btn-primary">
               <span class="text text-1">Read More</span> -->
@@ -648,24 +508,15 @@
 
             <p class="section-subtitle label-2">Speciality</p>
 
-            <h2 class="headline-1 section-title">Our Society</h2>
+            <h2 class="headline-1 section-title">About Us</h2>
 
-            <p class="section-text">
-              Welcome to 'Our Society', where community thrives and connections flourish. As residents, you're not just part of a neighborhood; you're integral members of a vibrant community. Explore our shared spaces, engage in meaningful interactions, and embrace the spirit of togetherness that defines 'Our Society
+            <p class="section-text" style="font-size: 20px;">
+            Welcome to SMS. An online society and accounting management portal. A unique platform which can be used by Cooperative Housing Societies / Resident Welfare Association (RWA) / Apartment Association etc. This platform expands transparency and aims to strengthen the bond among members and Managing Committee.
+
+SMS puts an end to the out-of-date approach adopted by various societies and paves the way to create cooperative spirit among society members and management. In a matter of clicks, one can have access to maintenance bills, payments, agenda’s, meeting of minutes, circulars, notices and many more interesting features. 
             </p>
 
-            <div class="wrapper">
-              <!-- <del class="del body-3">$40.00</del> -->
-
-              <!-- <span class="span body-1">$20.00</span> -->
-            </div>
-
-            <a href="#" class="btn btn-primary">
-              <span class="text text-1">Discover Your New Home</span>
-
-              <span class="text text-2" aria-hidden="true">Discover Your New Home</span>
-            </a>
-
+          
           </div>
         </div>
 
@@ -994,11 +845,11 @@
 
               <textarea name="message" placeholder="Message" autocomplete="off" class="input-field"></textarea>
 
-              <button type="submit" class="btn btn-secondary">
-                <span class="text text-1"  >Login</span>
+              <!-- <button type="submit" class="btn btn-secondary">
+                <span class="text text-1"  >Submit</span>
 
-                <span class="text text-2" aria-hidden="true" style="margin-left: 750px;">Login</span>
-              </button>
+                <span class="text text-2" aria-hidden="true" style="margin-left: 750px;">Submit</span>
+              </button> -->
 
             </form>
 
@@ -1008,7 +859,7 @@
 
               <p class="contact-label">Booking Request</p>
 
-              <a href="tel:+88123123456" class="body-1 contact-number hover-underline">+88-123-123456</a>
+              <a href="tel:+91 8380806582" class="body-1 contact-number hover-underline">+91 8380806582</a>
 
               <div class="separator"></div>
 
@@ -1245,7 +1096,7 @@
 
           <a href="mailto:booking@flats.com" class="body-4 contact-link">booking@flats.com</a>
 
-          <a href="tel:+88123123456" class="body-4 contact-link">Booking Request : +88-123-123456</a>
+          <a href="tel:+88123123456" class="body-4 contact-link">Booking Request : +91 8380806582</a>
 
           <!-- <p class="body-4">
             Open : 09:00 am - 01:00 pm
