@@ -1,6 +1,7 @@
 <?php
 
 if (isset($_POST['submit']) && isset($_FILES['my_image'])) {
+    include "db_conn.php";
     echo "<pre>";
     print_r($_FILES['my_image']);
     echo "</pre>";
@@ -25,14 +26,20 @@ if (isset($_POST['submit']) && isset($_FILES['my_image'])) {
                 $new_img_name = uniqid("IMG-", true).'.'.$img_ex_lc;
                 $img_upload_path = 'images/'.$new_img_name;
                 move_uploaded_file($tmp_name, $img_upload_path);
+
+                $sql = "INSERT INTO image(image_url) 
+                        VALUES('$new_img_name')";
+                mysql_querry($conn, $sql);
+                header("Location: view.php");        
             }else{
-                $em = "You can't upload files of this type";
+                $em = "You can't upload files of this type";    
                 header("Location: index.php?error=$em");
             }
         }
     }else{
         $em = "unknown error occured!";
         header("Location: index.php?error=$em");
+
     }
 
 }else{

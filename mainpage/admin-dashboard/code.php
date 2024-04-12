@@ -9,7 +9,7 @@
   $address = $_POST['address'];
   $password = $_POST['password'];
 
-  if(!empty($name) || !empty($username) || !empty($email) || !empty($flatnumber) ||!empty($phonenumber) ||!empty($address) ||!empty($password) )
+  if(!empty($name) || !empty($username) || !empty($email) || !empty($flatnumber) ||!empty($phonenumber) ||!empty($address) ||!empty($password))
   {
     $servername = "localhost";
     $dbUsername = "root";
