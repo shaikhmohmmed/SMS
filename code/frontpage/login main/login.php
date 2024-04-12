@@ -24,9 +24,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($result && mysqli_num_rows($result) > 0) {
         $row = mysqli_fetch_array($result);
         if ($row["usertype"] == "user") {
-            header("location: Enquiry.php");
+         header("Location: /SMS/code/user-dashboard/index.php");
+         exit;
+         
         } elseif ($row["usertype"] == "admin") {
-            echo "Admin";
+         header("Location: /SMS/code/admin-dashboard/index.php");
+         exit;
         } else {
             echo "Email ID or Password Incorrect";
         }
