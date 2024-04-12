@@ -30,9 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         } elseif ($row["usertype"] == "admin") {
          header("Location: /SMS/code/admin-dashboard/index.php");
          exit;
-        } else {
-            echo "Email ID or Password Incorrect";
-        }
+        } 
     } else {
         echo "Email ID or Password Incorrect";
     }

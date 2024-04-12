@@ -32,15 +32,7 @@ include('includes/sidebar.php');
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <?php
-                  $dash_query = "SELECT id from registration";
-                  $dash_query_run = mysqli($conn, $dash_query);
-                  if($user_total = mysqli_num_rows($dash_query_run)){
-                      echo '<h4>'.$user_total.'</h4>';
-                  }else{
-                    echo '<h4>No Data</h4>';
-                  }
-                ?>
+                
 
                 <p>New User</p>
               </div>

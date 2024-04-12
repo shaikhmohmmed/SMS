@@ -190,7 +190,7 @@
 
       </nav>
 
-      <a href="login page/login main/Enquiry.php" class="btn btn-secondary">
+      <a href="login main/Enquiry.php" class="btn btn-secondary">
        
       <button type="submit"> 
       <span class="text text-1">ENQUIRY</span>
@@ -242,7 +242,7 @@
               Family gatherings offer mouthwatering joy, managed by society.
             </p>
 
-            <a href="login page/login main/index.html" class="btn btn-primary slider-reveal">
+            <a href="login main/login.php" class="btn btn-primary slider-reveal">
               <span class="text text-1">Login</span>
               <span class="text text-2" aria-hidden="true">Login</span>
             </a>
@@ -266,7 +266,7 @@
               Empowering communities through social responsibility
             </p>
 
-            <a href="login page/login main/index.html" class="btn btn-primary slider-reveal">
+            <a href="login main/login.php" class="btn btn-primary slider-reveal">
               <span class="text text-1">Login</span>
 
               <span class="text text-2" aria-hidden="true">login</span>
@@ -290,7 +290,7 @@
               Enhancing Community Life Through Technology.
             </p>
 
-            <a href="login page/login main/index.html" class="btn btn-primary slider-reveal">
+            <a href="login main/login.php" class="btn btn-primary slider-reveal">
               <span class="text text-1">Login</span>
 
               <span class="text text-2" aria-hidden="true">Login</span>
