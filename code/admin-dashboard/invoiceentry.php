@@ -53,6 +53,10 @@ include('config.php');
                                                 <input type="text" name="payment"  class="form-control" placeholder="Payment Method" required>
                                             </div>
                                             <div class="form-group">
+                                                <label for="">Online Payment ID</label>
+                                                <input type="text" name="online"  class="form-control" placeholder="Payment ID" required>
+                                            </div>
+                                            <div class="form-group">
                                                 <label for="">Amount</label>
                                                 <input type="text" name="amount"  class="form-control" placeholder="Amount" required>
                                             </div>

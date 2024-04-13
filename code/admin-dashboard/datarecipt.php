@@ -47,9 +47,10 @@ include('config/dbcon.php');
             <tr>
               <th>Society ID</th>
               <th>Flat ID</th>
-              <th>Flat Member ID</th>
+              <th>Member Name</th>
               <th>Month/Year</th>
               <th>Credit/Debit/Cash</th>
+              <th>Payment ID</th>
               <th>Amount</th>
               <th>Image URL</th>
 
@@ -79,6 +80,7 @@ include('config/dbcon.php');
                               <td><?php echo $row['memberid'];  ?></td>
                               <td><?php echo $row['month'];  ?></td>
                               <td><?php echo $row['payment'];  ?></td>
+                              <td><?php echo $row['online'];  ?></td>
                               <td><?php echo $row['amount'];  ?></td>
                               <td><?php echo $row['imageurl'];  ?></td>
                 

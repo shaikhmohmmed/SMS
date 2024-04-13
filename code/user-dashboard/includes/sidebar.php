@@ -3,7 +3,7 @@
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
       <img src="assets/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">User Dashboard</span>
+      <span class="brand-text font-weight-light">SMS Dashboard</span>
     </a>
 
     <!-- Sidebar Menu -->
@@ -23,71 +23,54 @@
 
 
           <li class="nav-item">
-            <a href="maintance.php" class="nav-link">
-              <i class="nav-icon fas fa-book"></i>
+            <a href="invoiceentry.php" class="nav-link"> <!-- Corrected 'maintance' to 'maintenance' -->
+            <i class="nav-icon fas fa-credit-card"></i>
               <p>
-                Maintance
-                <i class="fas fa-angle-left right"></i>
+                Maintenance Payment
               </p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="invoiceentry.php" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Pay Maintance</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="invoicedata.php" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>My data</p>
-                </a>
-              </li>
-             
-              
-            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="invoicedata.php" class="nav-link"> <!-- Corrected 'maintance' to 'maintenance' -->
+            <i class="nav-icon fas fa-chart-bar"></i>
+              <p>
+              Payment Data   
+            </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="invoiceentry.php" class="nav-link"> <!-- Corrected 'maintance' to 'maintenance' -->
+            <i class="nav-icon fas fa-envelope"></i>
+              <p>
+              Mail Inbox   
+            </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="invoiceentry.php" class="nav-link"> <!-- Corrected 'maintance' to 'maintenance' -->
+            <i class="nav-icon fas fa-envelope-open-text"></i>
+              <p>
+              Mail Compose 
+            </p>
+            </a>
           </li>
 
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-book"></i>
-              <p>
-                Mailbox
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-             
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Compose</p>
-                </a>
-              </li>
-              
-            </ul>
-          </li>
+        
 
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-book"></i>
-              <p>
-            My Details               
-              </p>
-            </a>
-          </li>
+          
+          
          
           <li class="nav-header">ACCOUNT SETTING</li>
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-ellipsis-h"></i>
-              <p>Report Problem</p>
+              <p>Report</p>
             </a>
           </li>
-        
+          
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon fa fa-cog"></i>
+            <i class="nav-icon fa fa-power-off"></i>
               <p>Logout</p>
             </a>
           </li>

@@ -1,15 +1,16 @@
 <?php
 // Check if form data is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-//     // Validate and sanitize input data
+    // Validate and sanitize input data
     $fmid = $_POST['fmid'];
     $memberid = $_POST['memberid'];
     $payment = $_POST['payment'];
+    $online = $_POST['online']; // Corrected variable name
     $amount = $_POST['amount'];
     $imageurl = $_POST['imageurl'];
 
     // Validate input fields (You can add more validation as needed)
-    if (empty($fmid) || empty($memberid) || empty($payment) || empty($amount) || empty($imageurl)) {
+    if (empty($fmid) || empty($memberid) || empty($payment) || empty($online) || empty($amount) || empty($imageurl)) {
         echo "All fields are required";
         exit;
     }
@@ -29,18 +30,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Prepare insert query
-    $sql = "INSERT INTO bankstatement (fmid, memberid, payment, amount, imageurl) 
-            VALUES (?, ?, ?, ?, ?)";
+    $sql = "INSERT INTO bankstatement (fmid, memberid, payment, online, amount, imageurl) 
+            VALUES (?, ?, ?, ?, ?, ?)";
 
     // Prepare and bind parameters
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("sssis", $fmid, $memberid, $payment, $amount, $imageurl);
+    if (!$stmt) {
+        die("Error: " . $conn->error);
+    }
+    $stmt->bind_param("ssssis", $fmid, $memberid, $payment, $online, $amount, $imageurl);
 
     // Execute the query
     if ($stmt->execute()) {
         echo "New record inserted successfully";
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        echo "Error: " . $stmt->error;
     }
 
     // Close statement and connection
