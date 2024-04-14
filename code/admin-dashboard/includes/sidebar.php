@@ -1,7 +1,7 @@
 <!-- Main Sidebar Container -->
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
+    <a href="index.php" class="brand-link">
       <img src="assets/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">SMS Dashboard</span>
     </a>
@@ -24,9 +24,9 @@
 
           <li class="nav-item">
             <a href="maintance.php" class="nav-link">
-              <i class="nav-icon fas fa-book"></i>
+            <i class="nav-icon fas fa-credit-card"></i>
               <p>
-                Maintance
+                Payment
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>
@@ -55,7 +55,7 @@
 
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-book"></i>
+            <i class="nav-icon fas fa-envelope"></i>
               <p>
                 Mailbox
                 <i class="fas fa-angle-left right"></i>
@@ -80,30 +80,17 @@
 
           <li class="nav-item">
             <a href="datarecipt.php" class="nav-link">
-              <i class="nav-icon fas fa-book"></i>
+            <i class="nav-icon fas fa-file-invoice-dollar"></i>
               <p>
                 Bank Statement
                 
               </p>
             </a>
           </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-book"></i>
-              <p>
-               Society Vendor
-               
-              </p>
-            </a>
-          </li>
+         
          
           <li class="nav-header">ACCOUNT SETTING</li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-ellipsis-h"></i>
-              <p>Admin Profile</p>
-            </a>
-          </li>
+          
           <li class="nav-item">
             <a href="registered.php" class="nav-link">
               <i class="nav-icon fa fa-users"></i>
