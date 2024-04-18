@@ -5,6 +5,8 @@ $user = "root";
 $password = "";
 $dbname = "user";
 
+session_start();
+
 $data = mysqli_connect($host, $user, $password, $dbname);
 if ($data == false) {
     die("Connection Error");
@@ -24,6 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($result && mysqli_num_rows($result) > 0) {
         $row = mysqli_fetch_array($result);
         if ($row["usertype"] == "user") {
+         $_SESSION["username"]= $username;
          header("Location: /SMS/code/user-dashboard/index.php");
          exit;
          
@@ -36,6 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
+
 
 
 
@@ -54,6 +58,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <link rel="stylesheet" href="assets/css/styles.css">
 
       <title>Login form - SMS</title>
+
+      <script type= "text/javascript">
+         window.history.forward();
+      </script>
    </head>
    <body>
       <div class="login">

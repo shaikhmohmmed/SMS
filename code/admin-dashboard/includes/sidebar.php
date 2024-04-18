@@ -3,7 +3,7 @@
     <!-- Brand Logo -->
     <a href="index.php" class="brand-link">
       <img src="assets/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">SMS Dashboard</span>
+      <span class="brand-text font-weight-light">Avadh</span>
     </a>
 
     <!-- Sidebar Menu -->
@@ -34,15 +34,10 @@
               <li class="nav-item">
                 <a href="invoiceentry.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Invoice Entry</p>
+                  <p>Payment Details</p>
                 </a>
               </li>
-              <li class="nav-item">
-                <a href="invoicedata.php" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Invoice data</p>
-                </a>
-              </li>
+              
               <li class="nav-item">
                 <a href="electricity.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
@@ -53,36 +48,22 @@
             </ul>
           </li>
 
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-            <i class="nav-icon fas fa-envelope"></i>
-              <p>
-                Mailbox
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Inbox</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Compose</p>
-                </a>
-              </li>
-              
-            </ul>
-          </li>
 
           <li class="nav-item">
             <a href="datarecipt.php" class="nav-link">
             <i class="nav-icon fas fa-file-invoice-dollar"></i>
               <p>
                 Bank Statement
+                
+              </p>
+            </a>
+          </li>
+         
+          <li class="nav-item">
+            <a href="recipt-db.php" class="nav-link">
+            <i class="nav-icon fas fa-file-invoice-dollar"></i>
+              <p>
+                Recipt
                 
               </p>
             </a>
@@ -98,7 +79,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="/SMS/code/frontpage/login main/logout.php" class="nav-link">
             <i class="nav-icon fa fa-power-off"></i>
               <p>Logout</p>
             </a>
