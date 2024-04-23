@@ -1,59 +1,54 @@
 <?php
 session_start();
-include('includes/header.php');
-include('includes/topbar.php');
-include('includes/sidebar.php');
-// include('config.php');
-?>
-
-
-<?php
+include 'includes/header.php';
+include 'includes/topbar.php';
+// include 'includes/sidebar.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $userName = $_POST["userName"];
   $flatNumber = $_POST["flatNumber"];
   $maintenanceCharge = 5000; // Fixed maintenance charge
-  
+
   // Payment verification
   $paymentReference = $_POST["paymentReference"];
   $validPaymentReferences = array("123456", "789012", "345678"); // Example valid payment references
-  
+
   if (!in_array($paymentReference, $validPaymentReferences)) {
     die("Invalid payment reference. Please verify your payment and try again.");
   }
-  
+
   // Fetch previous dues from file or database (for demonstration, let's assume it's fetched from a file)
   $previousDuesFile = "previous_dues.txt";
   $previousDues = 0;
   if (file_exists($previousDuesFile)) {
     $previousDues = floatval(file_get_contents($previousDuesFile));
   }
-  
+
   // Deduct any extra payment from previous dues
   $paidAmount = $maintenanceCharge + $previousDues; // Add previous dues to paid amount
-  
+
   // Calculate penalty if paid after deadline (e.g., 10% of maintenance charge per day)
   $deadlineDate = strtotime("2024-05-01"); // Example deadline date
   $currentDate = time();
   $penalty = 0;
   if ($currentDate > $deadlineDate) {
     $daysLate = ceil(($currentDate - $deadlineDate) / (60 * 60 * 24));
-    $penalty = $maintenanceCharge * 0.01 * $daysLate; // 2% penalty per day for late payment
+    $penalty = $maintenanceCharge * 0.01 * $daysLate; // 1% penalty per day for late payment
   }
 
   $totalAmountDue = $maintenanceCharge + $penalty;
   $dues = $totalAmountDue - $paidAmount;
-  
+
   // Check if the user has paid the full amount
   if ($dues > 0) {
     // Calculate deadline for next month
     $nextMonthDeadline = strtotime("+1 month", $deadlineDate);
     $formattedNextMonthDeadline = date('d-m-Y', $nextMonthDeadline);
-    
+
     // Generate reminder message
     $reminderMsg = "Reminder: You have pending dues of ₹$dues. Please make the payment by $formattedNextMonthDeadline to avoid penalties.";
   }
-  
+
   // Save remaining dues for next month
   if ($dues < 0) {
     $remainingDues = abs($dues);
@@ -62,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // If there are no dues, clear the previous dues file
     file_put_contents($previousDuesFile, "");
   }
-  
+
   // Output receipt as PDF
   require('fpdf/fpdf.php');
 
@@ -108,5 +103,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 
 <?php
-include('includes/footer.php');
+include 'includes/footer.php';
 ?>

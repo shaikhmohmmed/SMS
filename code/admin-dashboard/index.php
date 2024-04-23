@@ -52,8 +52,8 @@ include('config/dbcon.php'); // Make sure this file establishes a database conne
                             <!-- <h4 class="mb-0">2</h4> -->
                         </div>
                         <div class="card-footer d-flex align-items-center justify-content-between">
-                            <a class="small text-white stretched-link" href="#">View Details</a>
-                            <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                            
+                           
                         </div>
                     </div>
                 </div>
@@ -76,8 +76,8 @@ include('config/dbcon.php'); // Make sure this file establishes a database conne
                             <!-- <h4 class="mb-0"></h4> -->
                         </div>
                         <div class="card-footer d-flex align-items-center justify-content-between">
-                            <a class="small text-white stretched-link" href="#">View Details</a>
-                            <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                            
+                            
                         </div>
                     </div>
                 </div>
@@ -100,8 +100,7 @@ include('config/dbcon.php'); // Make sure this file establishes a database conne
                             <!-- <h4 class="mb-0">2</h4> -->
                         </div>
                         <div class="card-footer d-flex align-items-center justify-content-between">
-                            <a class="small text-white stretched-link" href="#">View Details</a>
-                            <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                
                         </div>
                     </div>
                 </div>
@@ -109,7 +108,7 @@ include('config/dbcon.php'); // Make sure this file establishes a database conne
 
                     <div class="card bg-danger text-white mb-4">
                         <div class="card-body">
-                          Visiters
+                          Visitors
                           <?php
                             $dash_category_query = "SELECT * from visitors";
                             $dash_category_query_run = mysqli_query($conn, $dash_category_query);
@@ -124,8 +123,7 @@ include('config/dbcon.php'); // Make sure this file establishes a database conne
                             <!-- <h4 class="mb-0">2</h4> -->
                         </div>
                         <div class="card-footer d-flex align-items-center justify-content-between">
-                            <a class="small text-white stretched-link" href="#">View Details</a>
-                            <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                            
                         </div>
                     </div>
                 </div>
