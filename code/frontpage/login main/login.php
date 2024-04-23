@@ -28,6 +28,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($row["usertype"] == "user") {
          $_SESSION["username"]= $username;
          header("Location: /SMS/code/user-dashboard/index.php");
+            function fetchUser($id, $conn) {
+               $sql = "SELECT * FROM registration WHERE id = ?";
+               $stmt = $conn->prepare($sql);
+               $stmt->bind_param("i", $id);
+               $stmt->execute();
+               $result = $stmt->get_result();
+               $registration = $result->fetch_assoc();
+               $stmt->close();
+               return $registration;
+            }
+
+            // Fetch logged-in user data
+            $id = $_SESSION['id'];
+            $registration = fetchUser($id, $conn);
          exit;
          
         } elseif ($row["usertype"] == "admin") {
@@ -39,6 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
+
 
 
 

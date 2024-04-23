@@ -1,119 +1,157 @@
 <?php
-session_start();
+session_start(); // Starting the session
+
 include('includes/header.php');
 include('includes/topbar.php');
 include('includes/sidebar.php');
-include('config.php');
+include('config/dbcon.php'); // Make sure this file establishes a database connection
+
 ?>
 
-<script type= "text/javascript">
-         window.history.forward();
-      </script>
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <div class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1 class="m-0">Dashboard</h1>
-          </div><!-- /.col -->
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Dashboard</li>
-            </ol>
-          </div><!-- /.col -->
-        </div><!-- /.row -->
-      </div><!-- /.container-fluid -->
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1 class="m-0">Dashboard</h1>
+                </div><!-- /.col -->
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active">Dashboard</li>
+                    </ol>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
     </div>
 
     <!-- Main content -->
     <section class="content">
-      <div class="container-fluid">
-        <!-- Small boxes (Stat box) -->
-        <div class="row">
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-info">
-              <div class="inner">
-                <h3>150</h3>
+        <div class="container-fluid">
+            <!-- Small boxes (Stat box) -->
+            <div class="row">
+                <div class="col-xl-3 col-md-6">
 
-                <p>New User</p>
-              </div>
-              <div class="icon">
-              <i class="ion ion-person-add"></i>
-              </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-          <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-success">
-              <div class="inner">
-                <h3>0<sup style="font-size: 20px">%</sup></h3>
+                    <div class="card bg-primary text-white mb-4">
+                        <div class="card-body">
+                            New User
+                            <?php
+                            $dash_category_query = "SELECT * from registration";
+                            $dash_category_query_run = mysqli_query($conn, $dash_category_query);
+                            if ($dash_category_query_run) {
+                                $category_total = mysqli_num_rows($dash_category_query_run);
+                                echo '<h4 class="mb-0">' . $category_total . '</h4>';
+                            } else {
+                                echo '<h4 class="mb-0"> No Data </h4>';
+                            }
+                            ?>
 
-                <p>Report</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-stats-bars"></i>
-              </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-          <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-warning">
-              <div class="inner">
-                <h3>15</h3>
 
-                <p>Payment Done</p>
-              </div>
-              <div class="icon">
-              <i class="fas fa-credit-card"></i>
-              </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-          <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-danger">
-              <div class="inner">
-                <h3>0</h3>
+                            <!-- <h4 class="mb-0">2</h4> -->
+                        </div>
+                        <div class="card-footer d-flex align-items-center justify-content-between">
+                            <a class="small text-white stretched-link" href="#">View Details</a>
+                            <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6">
 
-                <p> Visitors</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-pie-graph"></i>
-              </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                    <div class="card bg-success text-white mb-4">
+                        <div class="card-body">
+                          Inciting
+                          <?php
+                            $dash_category_query = "SELECT * from inciting";
+                            $dash_category_query_run = mysqli_query($conn, $dash_category_query);
+                            if ($dash_category_query_run) {
+                                $category_total = mysqli_num_rows($dash_category_query_run);
+                                echo '<h4 class="mb-0">' . $category_total . '</h4>';
+                            } else {
+                                echo '<h4 class="mb-0"> No Data </h4>';
+                            }
+                            ?>
+
+                            <!-- <h4 class="mb-0"></h4> -->
+                        </div>
+                        <div class="card-footer d-flex align-items-center justify-content-between">
+                            <a class="small text-white stretched-link" href="#">View Details</a>
+                            <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6">
+
+                    <div class="card bg-warning text-white mb-4">
+                        <div class="card-body">
+                          User Registrations
+                          <?php
+                            $dash_category_query = "SELECT * from bankstatement";
+                            $dash_category_query_run = mysqli_query($conn, $dash_category_query);
+                            if ($dash_category_query_run) {
+                                $category_total = mysqli_num_rows($dash_category_query_run);
+                                echo '<h4 class="mb-0">' . $category_total . '</h4>';
+                            } else {
+                                echo '<h4 class="mb-0"> No Data </h4>';
+                            }
+                            ?>
+
+                            <!-- <h4 class="mb-0">2</h4> -->
+                        </div>
+                        <div class="card-footer d-flex align-items-center justify-content-between">
+                            <a class="small text-white stretched-link" href="#">View Details</a>
+                            <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6">
+
+                    <div class="card bg-danger text-white mb-4">
+                        <div class="card-body">
+                          Visiters
+                          <?php
+                            $dash_category_query = "SELECT * from visitors";
+                            $dash_category_query_run = mysqli_query($conn, $dash_category_query);
+                            if ($dash_category_query_run) {
+                                $category_total = mysqli_num_rows($dash_category_query_run);
+                                echo '<h4 class="mb-0">' . $category_total . '</h4>';
+                            } else {
+                                echo '<h4 class="mb-0"> No Data </h4>';
+                            }
+                            ?>
+
+                            <!-- <h4 class="mb-0">2</h4> -->
+                        </div>
+                        <div class="card-footer d-flex align-items-center justify-content-between">
+                            <a class="small text-white stretched-link" href="#">View Details</a>
+                            <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ./col -->
             </div>
-          </div>
-          <!-- ./col -->
-        </div>
-        <!-- /.row -->
+            <!-- /.row -->
         </div><!-- /.container-fluid -->
     </section>
 
     <div>
-      <div class="adminprofile">
-        <p>
-          Name: Mohammad Shaikh
-          <br>
-          Role: Society Admin
-          <br>
-          Documentation: 
-          <input type="file"> 
-        </p>
-      </div>
+        <div class="adminprofile">
+            <p>
+                Name: Mohammad Shaikh
+                <br>
+                Role: Society Admin
+                <br>
+                Documentation:
+                <form action="upload.php" method="post" enctype="multipart/form-data">
+                    <input type="file" name="fileToUpload" id="fileToUpload">
+                    <input type="submit" value="Upload File" name="submit">
+                </form>
+            </p>
+        </div>
     </div>
-  </div>
-
-
-
+</div>
 
 <?php
 include('includes/footer.php');

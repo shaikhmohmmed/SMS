@@ -66,9 +66,9 @@
           <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
         </div>
 
-        <span class="span">
+        <!-- <span class="span">
           Sinhgad Rd, Nanded Fata, Pandurang Industrial Area,Nanded, Pune, Maharashtra
-        </span>
+        </span> -->
       </address>
 
       <div class="separator"></div>
@@ -141,7 +141,7 @@
             <a href="#menu" class="navbar-link hover-underline">
               <div class="separator"></div>
 
-              <span class="span">Offers</span>
+              <span class="span">Services</span>
             </a>
           </li>
 
@@ -157,7 +157,7 @@
             <a href="#" class="navbar-link hover-underline">
               <div class="separator"></div>
 
-              <span class="span">Our Flats</span>
+              <span class="span">Contact</span>
             </a>
           </li>
 
@@ -165,7 +165,7 @@
             <a href="#" class="navbar-link hover-underline">
               <div class="separator"></div>
 
-              <span class="span">Contact</span>
+              <span class="span">feedback</span>
             </a>
           </li>
 
@@ -354,7 +354,7 @@
                     <a href="#">Parking</a>
 
                   <!-- <a href="#" class="btn-text hover-underline label-2">View More</a> -->
-                  <button type="submit"class="btn-text hover-underline label-2" onclick="openPopup()">View More</button>
+                  <!-- <button type="submit"class="btn-text hover-underline label-2" onclick="openPopup()">View More</button>
                   <div class="popup" id="popup-1">
                     <div class="overlay"></div>
                     <div class="content">
@@ -370,7 +370,7 @@
               function togglePopup() {
                 document.getElementById("popup-1").classList.toggle("active")
               }
-              </script>
+              </script> -->
               </div>
             </li>
 
@@ -390,7 +390,7 @@
                     <a href="#">Billing</a>
                   </h3>
 
-                  <a href="#" class="btn-text hover-underline label-2">View More</a>
+                  <!-- <a href="#" class="btn-text hover-underline label-2">View More</a> -->
 
                 </div>
 
@@ -413,7 +413,7 @@
                     <a href="#">Online Payment</a>
                   </h3>
 
-                  <a href="#" class="btn-text hover-underline label-2">View More</a>
+                  <!-- <a href="#" class="btn-text hover-underline label-2">View More</a> -->
 
                 </div>
 
@@ -438,27 +438,25 @@
         - #ABOUT
       -->
 
-      <section class="section about text-center" aria-labelledby="about-label" id="about">
+      <!-- <section class="section about text-center" aria-labelledby="about-label" id="about">
         <div class="container">
 
           <div class="about-content">
 
             <p class="label-2 section-subtitle" id="about-label">Our Society</p>
 
-            <h2 class="headline-1 section-title">In Short</h2>
+            <h2 class="headline-1 section-title"> Entry-Exit Process For All Your Visitors</h2>
 
             <p class="section-text">
-              Our society is a marvel of human collaboration, where myriad perspectives converge to create a vibrant tapestry of culture, knowledge, and innovation.
-              It pulsates with the rhythm of progress, fueled by the dynamic interplay of tradition and modernity. As we navigate its complexities, 
-              we are inspired to cultivate empathy, champion diversity, and forge paths of equity, ensuring that every voice is heard and every individual empowered to thrive in our shared journey forward.
+            Advance from manual entry and visitor logbooks with a smart visitor management system thus saving time and environment. We provide a mobile app based gate management solution that ensures a smooth, quick and pleasant entry-exit experience to all your visitors at the same time ensuring optimum security for the premises by restricting unauthorized visitors from entering and recording the time-stamps, photos and other details of visitors, daily help providers, cabs & delivery personnels
             </p>
 
             <div class="contact-label">Book Through Call</div>
 
             <a href="tel:+91 8380806582" class="body-1 contact-number hover-underline">+91 8380806582</a>
 
-            <!-- <a href="#" class="btn btn-primary">
-              <span class="text text-1">Read More</span> -->
+            <a href="#" class="btn btn-primary">
+              <span class="text text-1">Read More</span>
 
               <span class="text text-2" aria-hidden="true"></span>
             </a>
@@ -484,7 +482,7 @@
           <img src="./assets/images/build3.png" width="197" height="194" loading="lazy" alt="" class="shape">
 
         </div>
-      </section>
+      </section> -->
 
 
 
@@ -737,7 +735,7 @@ SMS puts an end to the out-of-date approach adopted by various societies and pav
         - #TESTIMONIALS
       -->
 
-      <section class="section testi text-center has-bg-image"
+      <!-- <section class="section testi text-center has-bg-image"
         style="background-image: url('./assets/images/trio.jpg')" aria-label="testimonials">
         <div class="container">
 
@@ -761,7 +759,7 @@ SMS puts an end to the out-of-date approach adopted by various societies and pav
           </div>
 
         </div>
-      </section>
+      </section> -->
 
 
 
@@ -838,12 +836,12 @@ SMS puts an end to the out-of-date approach adopted by various societies and pav
                     <option value="10:00pm">10 : 00 pm</option>
                   </select> -->
 
-                 <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
+                 <!-- <ion-icon name="chevron-down" aria-hidden="true"></ion-icon> -->
                 </div>
 
               </div> 
 
-              <textarea name="message" placeholder="Message" autocomplete="off" class="input-field"></textarea>
+              <!-- <textarea name="message" placeholder="Message" autocomplete="off" class="input-field"></textarea> -->
 
               <!-- <button type="submit" class="btn btn-secondary">
                 <span class="text text-1"  >Submit</span>
@@ -979,7 +977,7 @@ SMS puts an end to the out-of-date approach adopted by various societies and pav
 
 
 
-      <!-- 
+<!--       
         - #EVENT
       -->
 
