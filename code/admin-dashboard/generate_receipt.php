@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $penalty = 0;
   if ($currentDate > $deadlineDate) {
     $daysLate = ceil(($currentDate - $deadlineDate) / (60 * 60 * 24));
-    $penalty = $maintenanceCharge * 0.01 * $daysLate; // 1% penalty per day for late payment
+    $penalty = $maintenanceCharge * 0.001 * $daysLate; // 1% penalty per day for late payment
   }
 
   $totalAmountDue = $maintenanceCharge + $penalty;
