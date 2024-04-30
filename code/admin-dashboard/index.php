@@ -85,7 +85,7 @@ include('config/dbcon.php'); // Make sure this file establishes a database conne
 
                     <div class="card bg-warning text-white mb-4">
                         <div class="card-body">
-                          User Registrations
+                          Payment Completed
                           <?php
                             $dash_category_query = "SELECT * from bankstatement";
                             $dash_category_query_run = mysqli_query($conn, $dash_category_query);

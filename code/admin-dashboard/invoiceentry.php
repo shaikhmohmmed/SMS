@@ -28,7 +28,7 @@ include('config.php');
                 <!-- /.card -->
         <div class="card">
             <div class="card-header">
-            <h3 class="card-title">Data Entry
+            <h3 class="card-title">Payment
                 </h3>
                 <br>
                 <br>

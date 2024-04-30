@@ -34,16 +34,16 @@
               <li class="nav-item">
                 <a href="invoiceentry.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Payment Details</p>
+                  <p>Pay Bill</p>
                 </a>
               </li>
-              
+<!--               
               <li class="nav-item">
                 <a href="#" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>fill this</p>
                 </a>
-              </li>
+              </li> -->
               
             </ul>
           </li>
