@@ -1,11 +1,11 @@
 <?php
+session_start();
 
 $host = "localhost";
 $user = "root";
 $password = "";
 $dbname = "user";
 
-session_start();
 
 $data = mysqli_connect($host, $user, $password, $dbname);
 if ($data == false) {
@@ -46,12 +46,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
          
         } elseif ($row["usertype"] == "admin") {
          header("Location: /SMS/code/admin-dashboard/index.php");
+         if ($result->num_rows > 0) {
+            // Fetch user data
+            $row = $result->fetch_assoc();
+            // Display user data
+            echo "Name: " . $row['name'] . "<br>";
+            echo "Flat Number: " . $row['flatnumber'] . "<br>";
+            echo "Phone: " . $row['phonenumber'] . "<br>";
+            // Add more fields as needed
+        } else {
+            echo "No user found with the provided email and password";
+        }
+    
+        // Close statement
+        $stmt->close();
+    } else {
+        echo "Form data not submitted";
+    }
          exit;
         } 
     } else {
         echo "Email ID or Password Incorrect";
     }
-}
+
 ?>
 
 

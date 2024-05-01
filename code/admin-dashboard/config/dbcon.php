@@ -15,6 +15,6 @@ if(!$conn)
     die();
 }
 else{
-    echo "Database Connected.!";
+    // echo "Database Connected.!";
 }
 ?>
