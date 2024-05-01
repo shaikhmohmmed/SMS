@@ -37,13 +37,7 @@
                   <p>Pay Bill</p>
                 </a>
               </li>
-<!--               
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>fill this</p>
-                </a>
-              </li> -->
+
               
             </ul>
           </li>
@@ -58,6 +52,17 @@
               </p>
             </a>
           </li>
+
+          <li class="nav-item">
+            <a href="visitor-db.php" class="nav-link">
+            <i class="nav-icon fas fa-file-invoice-dollar"></i>
+              <p>
+                Visitor Detail
+                
+              </p>
+            </a>
+          </li>
+
          
           <li class="nav-item">
             <a href="recipt-db.php" class="nav-link">
