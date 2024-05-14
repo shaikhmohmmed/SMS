@@ -28,15 +28,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($row["usertype"] == "user") {
          $_SESSION["username"]= $username;
          header("Location: /SMS/code/user-dashboard/index.php");
-            function fetchUser($id, $conn) {
-               $sql = "SELECT * FROM registration WHERE id = ?";
-               $stmt = $conn->prepare($sql);
-               $stmt->bind_param("i", $id);
-               $stmt->execute();
-               $result = $stmt->get_result();
-               $registration = $result->fetch_assoc();
-               $stmt->close();
-               return $registration;
             }
 
             // Fetch logged-in user data
@@ -50,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Fetch user data
             $row = $result->fetch_assoc();
             // Display user data
-            echo "Name: " . $row['name'] . "<br>";
+             $_SESSION "" "<br>";
             echo "Flat Number: " . $row['flatnumber'] . "<br>";
             echo "Phone: " . $row['phonenumber'] . "<br>";
             // Add more fields as needed
