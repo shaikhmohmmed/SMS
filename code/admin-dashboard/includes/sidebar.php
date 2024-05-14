@@ -55,7 +55,7 @@
 
           <li class="nav-item">
             <a href="visitor-db.php" class="nav-link">
-            <i class="nav-icon fas fa-file-invoice-dollar"></i>
+            <i class="nav-icon fas fa-user"></i>
               <p>
                 Visitor Detail
                 
@@ -66,7 +66,7 @@
          
           <li class="nav-item">
             <a href="recipt-db.php" class="nav-link">
-            <i class="nav-icon fas fa-file-invoice-dollar"></i>
+            <i class="nav-icon fas fa-dollar-sign"></i>
               <p>
                 Recipt
                 

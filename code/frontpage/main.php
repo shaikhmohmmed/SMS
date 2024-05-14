@@ -91,12 +91,12 @@
 
       <div class="separator"></div>
 
-      <a href="mailto:booking@flats.com" class="topbar-item link">
+      <a href="mailto:societysystem03@gmail.com" class="topbar-item link">
         <div class="icon">
           <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
         </div>
 
-        <span class="span">bookingflats@gmail.com</span>
+        <span class="span">societysystem03@gmail.com</span>
       </a>
 
     </div>
