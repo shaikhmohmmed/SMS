@@ -1,6 +1,15 @@
+<?php
+session_start();
+include 'includes/header.php';
+include 'includes/topbar.php';
+include 'includes/sidebar.php';
+include ('config/dbcon.php');
+?>
+<?php
 
 
 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,18 +50,18 @@
 
 <div class="container mt-5">
   <h1 class="text-center mb-4">Receipt</h1>
-  <form id="receiptForm" onsubmit="event.preventDefault(); generateReceipt();">
+  <form id="receiptForm" onsubmit="event.preventDefault(); generateReceipt();" action = "#" method = "POST">
     <div class="form-group">
       <label for="memberName">Member Name:</label>
       <input type="text" class="form-control" id="memberName" name = "memberName" placeholder="Enter member name" required>
     </div>
     <div class="form-group">
       <label for="flatNumber">Flat Number:</label>
-      <input type="text" class="form-control" id="flatNumber" flatNumber = "flatNumber" placeholder="Enter flat number" required>
+      <input type="text" class="form-control" name="flatnumber" id="flatNumber"  placeholder="Enter flat number" required>
     </div>
     <div class="form-group">
         <label for="paymentReference">Payment Reference:</label>
-        <select class="form-control" id="paymentReference" required>
+        <select class="form-control" name= "method" id="paymentReference" required>
           <option value="">Select payment reference</option>
           <option value="online">Online</option>
           <option value="cash">Cash</option>
@@ -60,11 +69,11 @@
       </div>
     <div class="form-group">
       <label for="paymentProof">Payment Proof:</label>
-      <input type="file" class="form-control-file" id="paymentProof" accept="image/*,.pdf" required>
+      <input type="file" class="form-control-file" name="proof" id="paymentProof" accept="image/*,.pdf" required>
     </div>
     <div class="form-group">
         <label for="amount">Amount Paid:</label>
-        <input type="text" class="form-control" id="amount" placeholder="Enter amount" required>
+        <input type="text" class="form-control" name="amount" id="amount" placeholder="Enter amount" required>
     </div>
     <button type="submit" class="btn btn-primary">Generate Receipt</button>
   </form>
@@ -145,3 +154,6 @@ function generateReceipt() {
 
 </body>
 </html>
+    <?php
+include 'includes/footer.php';
+?>

@@ -1,4 +1,7 @@
 <?php
+session_start();
+include('config/dbcon.php'); // Make sure this file establishes a database connection
+
 // UPDATE USER CONNECTION
 if(isset($_POST['updateUser'])) {
     $user_id = $_POST['user_id'];
@@ -22,5 +25,4 @@ if(isset($_POST['updateUser'])) {
     }
     die();
 }
-
 ?>

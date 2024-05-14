@@ -6,7 +6,6 @@ $user = "root";
 $password = "";
 $dbname = "user";
 
-
 $data = mysqli_connect($host, $user, $password, $dbname);
 if ($data == false) {
     die("Connection Error");
@@ -26,42 +25,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($result && mysqli_num_rows($result) > 0) {
         $row = mysqli_fetch_array($result);
         if ($row["usertype"] == "user") {
-         $_SESSION["username"]= $username;
-         header("Location: /SMS/code/user-dashboard/index.php");
-            }
-
-            // Fetch logged-in user data
-            $id = $_SESSION['id'];
-            $registration = fetchUser($id, $conn);
-         exit;
-         
+            $_SESSION["username"] = $row["username"]; 
+            $_SESSION["name"] = $row["name"]; 
+            $_SESSION["phonenumber"] = $row["phonenumber"];
+            $_SESSION["address"] = $row["address"]; 
+            
+            
+            header("Location: /SMS/code/user-dashboard/index.php");
+            exit;
         } elseif ($row["usertype"] == "admin") {
-         header("Location: /SMS/code/admin-dashboard/index.php");
-         if ($result->num_rows > 0) {
-            // Fetch user data
-            $row = $result->fetch_assoc();
-            // Display user data
-             $_SESSION "" "<br>";
-            echo "Flat Number: " . $row['flatnumber'] . "<br>";
-            echo "Phone: " . $row['phonenumber'] . "<br>";
-            // Add more fields as needed
-        } else {
-            echo "No user found with the provided email and password";
+            header("Location: /SMS/code/admin-dashboard/index.php");
+            exit;
         }
-    
-        // Close statement
-        $stmt->close();
     } else {
-        echo "Form data not submitted";
+        echo "No user found with the provided email and password";
     }
-         exit;
-        } 
-    } else {
-        echo "Email ID or Password Incorrect";
-    }
+} else {
+    echo "";
+}
 
+// Close statement and connection
+// $stmt->close();
+mysqli_close($data);
 ?>
-
 
 
 

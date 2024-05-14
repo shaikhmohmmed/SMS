@@ -74,11 +74,13 @@ include('config/dbcon.php');
                             ?>
                             <tr>
                               <td><?php echo $row['id'];  ?></td>
-                              <td><?php echo $row['name'];  ?></td>
+                              <td><?php echo $row['membername'];  ?></td>
                               <td><?php echo $row['flatnumber'];  ?></td>
-                              <td><?php echo $row['buildnumber'];  ?></td>
+                              <td><?php echo $row['method'];  ?></td>
+                              <td><?php echo $row['proof'];  ?></td>
+                              <td><?php echo $row['amount'];  ?></td>
                               <td>
-                                <a href="recipt.php?user_id=<?php echo $row['id'];  ?>" class=" btn btn-info btn-sm">View</a>                 
+                                <a href="re.php?user_id=<?php echo $row['id'];  ?>" class=" btn btn-info btn-sm">View</a>                 
                             </td>
                         </tr>
                         <?php

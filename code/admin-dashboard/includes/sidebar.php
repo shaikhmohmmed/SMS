@@ -22,7 +22,7 @@
         
 
 
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a href="maintance.php" class="nav-link">
             <i class="nav-icon fas fa-credit-card"></i>
               <p>
@@ -40,7 +40,7 @@
 
               
             </ul>
-          </li>
+          </li> -->
 
 
           <li class="nav-item">
@@ -65,7 +65,7 @@
 
          
           <li class="nav-item">
-            <a href="recipt-db.php" class="nav-link">
+            <a href="re.php" class="nav-link">
             <i class="nav-icon fas fa-dollar-sign"></i>
               <p>
                 Recipt

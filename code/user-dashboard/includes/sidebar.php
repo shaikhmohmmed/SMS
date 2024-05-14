@@ -22,14 +22,7 @@
         
 
 
-          <li class="nav-item">
-            <a href="invoiceentry.php" class="nav-link"> <!-- Corrected 'maintance' to 'maintenance' -->
-            <i class="nav-icon fas fa-credit-card"></i>
-              <p>
-                Maintenance Payment
-              </p>
-            </a>
-          </li>
+          
           <li class="nav-item">
             <a href="invoicedata.php" class="nav-link"> <!-- Corrected 'maintance' to 'maintenance' -->
             <i class="nav-icon fas fa-chart-bar"></i>
@@ -38,35 +31,14 @@
             </p>
             </a>
           </li>
-          <li class="nav-item">
-            <a href="invoiceentry.php" class="nav-link"> <!-- Corrected 'maintance' to 'maintenance' -->
-            <i class="nav-icon fas fa-envelope"></i>
-              <p>
-              Mail Inbox   
-            </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="invoiceentry.php" class="nav-link"> <!-- Corrected 'maintance' to 'maintenance' -->
-            <i class="nav-icon fas fa-envelope-open-text"></i>
-              <p>
-              Mail Compose 
-            </p>
-            </a>
-          </li>
+          
 
         
 
           
           
          
-          <li class="nav-header">ACCOUNT SETTING</li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-ellipsis-h"></i>
-              <p>Report</p>
-            </a>
-          </li>
+          
           
           <li class="nav-item">
             <a href="/SMS/code/frontpage/login main/logout.php" class="nav-link">

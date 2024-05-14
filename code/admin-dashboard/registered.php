@@ -49,7 +49,7 @@ include('config/dbcon.php');
             </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-secondary" name="btnsub" data-bs-dismiss="modal">Close</button>
             <button type="submit" name= "addUser "class="btn btn-primary">Save</button>
           </div>
         </form>
