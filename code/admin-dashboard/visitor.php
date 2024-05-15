@@ -1,7 +1,7 @@
 <?php
 session_start();
 include('includes/header.php');
-include('includes/topbar.php');
+// include('includes/topbar.php');
 // include('includes/sidebar.php');
 include('config/dbcon.php');
 ?>
@@ -50,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Execute the query
     if ($stmt->execute()) {
-        echo "New record inserted successfully";
+        echo "";
     } else {
         echo "Error: " . $stmt->error;
     }
@@ -67,22 +67,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
 
-    <div class="content-header">
-        <div class="container-fluid">
-            <div class="row mb-2">
-            <div class="col-sm-6">
-                <h1 class="m-0">Dashboard</h1>
-            </div><!-- /.col -->
-            <div class="col-sm-6">
-                <ol class="breadcrumb float-sm-right">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item active">Visitor Entry</li>
-                </ol>
-            </div><!-- /.col -->
-            </div><!-- /.row -->
-        </div><!-- /.container-fluid -->
-        </div>
-
+   
                 <!-- /.card -->
         <div class="card">
             <div class="card-header">
@@ -90,7 +75,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </h3>
                 <br>
                 <br>
-                <a href="index.php" class="btn btn-primary btn-sm float-right btn-danger">Back</a>
+                <!-- <a href="index.php" class="btn btn-primary btn-sm float-right btn-danger">Back</a> -->
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-6">

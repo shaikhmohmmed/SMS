@@ -110,7 +110,7 @@ include('config/dbcon.php'); // Make sure this file establishes a database conne
                         <div class="card-body">
                           Visitors
                           <?php
-                            $dash_category_query = "SELECT * from visitors";
+                            $dash_category_query = "SELECT * from visitor_detail";
                             $dash_category_query_run = mysqli_query($conn, $dash_category_query);
                             if ($dash_category_query_run) {
                                 $category_total = mysqli_num_rows($dash_category_query_run);

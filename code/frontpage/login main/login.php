@@ -27,10 +27,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($row["usertype"] == "user") {
             $_SESSION["username"] = $row["username"]; 
             $_SESSION["name"] = $row["name"]; 
+            $_SESSION["email"] = $row["email"];
             $_SESSION["phonenumber"] = $row["phonenumber"];
+            $_SESSION['flatnumber'] = $row['flatnumber']; 
             $_SESSION["address"] = $row["address"]; 
             
-            
+            // After setting session variables
+var_dump($_SESSION); // Check if session variables are set correctly, including 'flatnumber'
+
             header("Location: /SMS/code/user-dashboard/index.php");
             exit;
         } elseif ($row["usertype"] == "admin") {
