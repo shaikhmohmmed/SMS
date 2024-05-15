@@ -63,7 +63,15 @@
             </a>
           </li>
 
-         
+          <li class="nav-item">
+            <a href="inciting_data.php" class="nav-link">
+            <i class="nav-icon fa fa-users"></i>
+              <p>
+                Inciting Details
+                
+              </p>
+            </a>
+          </li>
           <li class="nav-item">
             <a href="re.php" class="nav-link">
             <i class="nav-icon fas fa-dollar-sign"></i>

@@ -31,6 +31,17 @@
             </p>
             </a>
           </li>
+
+               
+          <li class="nav-item">
+            <a href="incitingdetails.php" class="nav-link"> <!-- Corrected 'maintance' to 'maintenance' -->
+            <i class="nav-icon fas fa-user"></i>
+              <p>
+             Inciting Details
+            </p>
+            </a>
+          </li>
+          
           
 
         

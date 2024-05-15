@@ -22,7 +22,7 @@ include('config/dbcon.php');
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Maintance Fee</li>
+              <li class="breadcrumb-item active">Inciting Data</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -38,7 +38,7 @@ include('config/dbcon.php');
       ?>
       <div class="card">
         <div class="card-header">
-          <h3 class="card-title">Maintance Fee Data
+          <h3 class="card-title">Data Of New User
             </h3>
         </div>
        <!-- /.card-header -->
@@ -48,9 +48,10 @@ include('config/dbcon.php');
             <tr>
               <th>Sr No.</th>
               <th>Name</th>
-              <th>Flat Number</th>
-              <th>Building Number</th>
-              <th>Bill</th>
+              <th>Phone Number</th>
+              <th>Adhar/PAN-CARD</th>
+              <th>Address</th>
+              <th>Image of Document</th>
 
             </tr>
             </thead>
@@ -60,7 +61,7 @@ include('config/dbcon.php');
                 // Assuming you have already established a database connection
 
                 // Make sure $conn is your mysqli connection variable
-                $query = "SELECT * FROM invoice"; // Replace "your_table" with your actual table name
+                $query = "SELECT * FROM inciting_detail"; // Replace "your_table" with your actual table name
 
                 // Perform the query using mysqli_query with the connection object and SQL query
                 $query_run = mysqli_query($conn, $query);
@@ -74,14 +75,12 @@ include('config/dbcon.php');
                             ?>
                             <tr>
                               <td><?php echo $row['id'];  ?></td>
-                              <td><?php echo $row['membername'];  ?></td>
-                              <td><?php echo $row['flatnumber'];  ?></td>
-                              <td><?php echo $row['method'];  ?></td>
-                              <td><?php echo $row['proof'];  ?></td>
-                              <td><?php echo $row['amount'];  ?></td>
-                              <td>
-                                <a href="re.php?user_id=<?php echo $row['id'];  ?>" class=" btn btn-info btn-sm">View</a>                 
-                            </td>
+                              <td><?php echo $row['name'];  ?></td>
+                              <td><?php echo $row['phone'];  ?></td>
+                              <td><?php echo $row['card'];  ?></td>
+                              <td><?php echo $row['address'];  ?></td>
+                              <td><?php echo $row['img'];  ?></td>
+                              
                         </tr>
                         <?php
                         }

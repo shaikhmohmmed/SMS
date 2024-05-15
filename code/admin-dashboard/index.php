@@ -61,7 +61,7 @@ include('config/dbcon.php'); // Make sure this file establishes a database conne
 
                     <div class="card bg-success text-white mb-4">
                         <div class="card-body">
-                          Inciting
+                          Iniciting
                           <?php
                             $dash_category_query = "SELECT * from inciting";
                             $dash_category_query_run = mysqli_query($conn, $dash_category_query);

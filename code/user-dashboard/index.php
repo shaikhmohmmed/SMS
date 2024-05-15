@@ -31,6 +31,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['name']) && isset($_SESSION[
     echo "</div>";
     echo "<div class='card-body'>";
     if (["usertype"] == "user") 
+    
     echo "<p>Name: " . $_SESSION['name'] . "</p>";
     echo "<p>Username: " . $_SESSION['username'] . "</p>";
     echo "<p>Email: " . $_SESSION['email'] . "</p>"; // Make sure email is set in session
