@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // After setting session variables
 var_dump($_SESSION); // Check if session variables are set correctly, including 'flatnumber'
 
-            header("Location: /SMS/code/user-dashboard/index.php");
+            header("Location:/SMS/code/user-dashboard/index.php");
             exit;
         } elseif ($row["usertype"] == "admin") {
          $_SESSION["username"] = $row["username"]; 
@@ -48,7 +48,7 @@ var_dump($_SESSION); // Check if session variables are set correctly, including 
             // After setting session variables
 var_dump($_SESSION); // Check if session variables are set correctly, including 'flatnumber'
 
-            header("Location: /SMS/code/admin-dashboard/index.php");
+            header("<Location:/SMS/code/admin-dashboard/index.php");
             exit;
         }
     } else {
